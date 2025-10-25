@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hamid LEULMI - Ingénieur Développement / Data Engineer</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #2563eb;
+            --primary-dark: #1e40af;
+            --secondary: #64748b;
+            --accent: #0ea5e9;
+            --bg: #0f172a;
+            --bg-card: #1e293b;
+            --text: #f1f5f9;
+            --text-muted: #cbd5e1;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Header */
+        header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            padding: 80px 0;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        header::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml,<svg width="100" height="100" xmlns="http://www.w3.org/2000/svg"><rect width="100" height="100" fill="none"/><path d="M0 0L100 100M100 0L0 100" stroke="rgba(255,255,255,0.03)" stroke-width="2"/></svg>');
+            opacity: 0.5;
+        }
+
+        header .container {
+            position: relative;
+            z-index: 1;
+        }
+
+        h1 {
+            font-size: 3em;
+            margin-bottom: 10px;
+            font-weight: 700;
+        }
+
+        .subtitle {
+            font-size: 1.3em;
+            opacity: 0.95;
+            margin-bottom: 30px;
+        }
+
+        .header-links {
+            display: flex;
+            gap: 20px;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .header-links a {
+            color: white;
+            text-decoration: none;
+            padding: 10px 25px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 25px;
+            transition: all 0.3s;
+            backdrop-filter: blur(10px);
+        }
+
+        .header-links a:hover {
+            background: rgba(255,255,255,0.3);
+            transform: translateY(-2px);
+        }
+
+        /* About Section */
+        .about {
+            padding: 60px 0;
+            background: var(--bg);
+        }
+
+        .about-content {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 40px;
+            align-items: start;
+        }
+
+        .about h2 {
+            font-size: 2.5em;
+            margin-bottom: 20px;
+            color: var(--accent);
+        }
+
+        .about p {
+            color: var(--text-muted);
+            font-size: 1.1em;
+            margin-bottom: 20px;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+            gap: 15px;
+        }
+
+        .skill-badge {
+            background: var(--bg-card);
+            padding: 12px 20px;
+            border-radius: 8px;
+            text-align: center;
+            border: 2px solid transparent;
+            transition: all 0.3s;
+        }
+
+        .skill-badge:hover {
+            border-color: var(--accent);
+            transform: translateY(-3px);
+        }
+
+        /* Projects Section */
+        .projects {
+            padding: 80px 0;
+            background: linear-gradient(180deg, var(--bg) 0%, #1a2332 100%);
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5em;
+            margin-bottom: 50px;
+            color: var(--accent);
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 30px;
+        }
+
+        .project-card {
+            background: var(--bg-card);
+            border-radius: 12px;
+            overflow: hidden;
+            transition: all 0.3s;
+            border: 2px solid transparent;
+        }
+
+        .project-card:hover {
+            transform: translateY(-8px);
+            border-color: var(--accent);
+            box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+        }
+
+        .project-header {
+            background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
+            padding: 30px;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .project-header::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 200%;
+            height: 200%;
+            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+        }
+
+        .project-header h3 {
+            font-size: 1.5em;
+            margin-bottom: 8px;
+            position: relative;
+        }
+
+        .project-type {
+            opacity: 0.9;
+            font-size: 0.9em;
+            position: relative;
+        }
+
+        .project-body {
+            padding: 25px;
+        }
+
+        .project-body p {
+            color: var(--text-muted);
+            margin-bottom: 20px;
+            font-size: 0.95em;
+        }
+
+        .tech-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-bottom: 20px;
+        }
+
+        .tech-tag {
+            background: var(--primary);
+            color: white;
+            padding: 5px 12px;
+            border-radius: 15px;
+            font-size: 0.85em;
+        }
+
+        .project-links {
+            display: flex;
+            gap: 15px;
+        }
+
+        .project-links a {
+            flex: 1;
+            text-align: center;
+            padding: 10px;
+            background: var(--primary);
+            color: white;
+            text-decoration: none;
+            border-radius: 6px;
+            transition: all 0.3s;
+        }
+
+        .project-links a:hover {
+            background: var(--primary-dark);
+            transform: scale(1.05);
+        }
+
+        .project-links a.secondary {
+            background: var(--secondary);
+        }
+
+        .project-links a.secondary:hover {
+            background: #475569;
+        }
+
+        /* Experience Timeline */
+        .experience {
+            padding: 80px 0;
+            background: var(--bg);
+        }
+
+        .timeline {
+            max-width: 800px;
+            margin: 0 auto;
+            position: relative;
+        }
+
+        .timeline::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 0;
+            bottom: 0;
+            width: 2px;
+            background: var(--accent);
+            transform: translateX(-50%);
+        }
+
+        .timeline-item {
+            margin-bottom: 50px;
+            position: relative;
+        }
+
+        .timeline-item:nth-child(odd) .timeline-content {
+            margin-left: auto;
+            text-align: left;
+        }
+
+        .timeline-content {
+            background: var(--bg-card);
+            padding: 25px;
+            border-radius: 10px;
+            width: calc(50% - 30px);
+            border: 2px solid var(--accent);
+        }
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            left: 50%;
+            top: 30px;
+            width: 20px;
+            height: 20px;
+            background: var(--accent);
+            border-radius: 50%;
+            transform: translateX(-50%);
+            border: 4px solid var(--bg);
+            z-index: 1;
+        }
+
+        .timeline-date {
+            color: var(--accent);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .timeline-content h3 {
+            font-size: 1.3em;
+            margin-bottom: 5px;
+        }
+
+        .timeline-company {
+            color: var(--text-muted);
+            font-style: italic;
+            margin-bottom: 15px;
+        }
+
+        /* Footer */
+        footer {
+            background: var(--bg-card);
+            padding: 40px 0;
+            text-align: center;
+        }
+
+        footer p {
+            color: var(--text-muted);
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+
+            .about-content {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .timeline::before {
+                left: 0;
+            }
+
+            .timeline-content {
+                width: calc(100% - 40px);
+                margin-left: 40px !important;
+                text-align: left !important;
+            }
+
+            .timeline-item::before {
+                left: 0;
+            }
+        }
+
+        /* Smooth scroll */
+        html {
+            scroll-behavior: smooth;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Hamid LEULMI</h1>
+            <p class="subtitle">Ingénieur Développement / Data Engineer</p>
+            <div class="header-links">
+                <a href="https://github.com/Hamid-LMI" target="_blank">🔗 GitHub</a>
+                <a href="https://www.linkedin.com/in/hamid-leulmi" target="_blank">💼 LinkedIn</a>
+                <a href="mailto:hamid.leulmi@laposte.net">📧 Contact</a>
+            </div>
+        </div>
+    </header>
+
+    <section class="about">
+        <div class="container">
+            <div class="about-content">
+                <div>
+                    <h2>À propos</h2>
+                    <p>Ingénieur diplômé avec 4+ ans d'expérience en développement web full-stack et data engineering. Passionné par la création de solutions techniques élégantes et performantes.</p>
+                    <p>Spécialisé dans le développement d'applications web modernes, l'architecture cloud et la sécurité applicative. Fort d'une expérience en méthodologie Agile et en gestion de projets techniques de bout en bout.</p>
+                </div>
+                <div>
+                    <h2>Compétences</h2>
+                    <div class="skills-grid">
+                        <div class="skill-badge">Python</div>
+                        <div class="skill-badge">PHP</div>
+                        <div class="skill-badge">JavaScript</div>
+                        <div class="skill-badge">React</div>
+                        <div class="skill-badge">Django</div>
+                        <div class="skill-badge">Docker</div>
+                        <div class="skill-badge">PostgreSQL</div>
+                        <div class="skill-badge">MongoDB</div>
+                        <div class="skill-badge">Linux</div>
+                        <div class="skill-badge">Nginx</div>
+                        <div class="skill-badge">Git</div>
+                        <div class="skill-badge">Agile/Scrum</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="projects">
+        <div class="container">
+            <h2 class="section-title">Projets Phares</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Plateforme VTC Lille</h3>
+                        <p class="project-type">Application de Réservation</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Site de réservation VTC complet avec calcul dynamique des prix, cartes interactives (Leaflet, Mapbox), et infrastructure sécurisée (Docker, Nginx, SSL/TLS, RGPD).</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Nginx</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://itim-vtc-lille.fr/" target="_blank">🌐 Voir le site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Gestion de Bibliothèque</h3>
+                        <p class="project-type">Application Full Stack</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Application web complète avec backend Django REST API et frontend React. Architecture Docker multi-services, déploiement cloud automatisé (Vercel/Render).</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Cloud</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Hamid-LMI/library_project" target="_blank">💻 GitHub</a>
+                            <a href="#" class="secondary">🌐 Demo</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Nord Plomberie</h3>
+                        <p class="project-type">Site Vitrine & SEO</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Site vitrine professionnel optimisé SEO avec articles de conseils, fiche Google My Business, et sécurisation complète (firewall, SSL/TLS, RGPD).</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">SEO</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Nginx</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://nord-plomberie.fr/" target="_blank">🌐 Voir le site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>API Éligibilité FTTH</h3>
+                        <p class="project-type">Solution B2B</p>
+                    </div>
+                    <div class="project-body">
+                        <p>API Python/Flask avec carte interactive pour accès instantané à l'éligibilité FTTH. Traitement de fichiers IPE, stockage NoSQL, optimisation GPS.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Python</span>
+                            <span class="tech-tag">Flask</span>
+                            <span class="tech-tag">MongoDB</span>
+                            <span class="tech-tag">APIs REST</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="secondary">🔒 Projet pro</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Plateforme FTTO</h3>
+                        <p class="project-type">ERP Télécom</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Solution complète d'éligibilité et commandes FTTO intégrée à l'ERP. Développement en méthode Agile/Scrum avec TDD et ReactJS.</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PHP</span>
+                            <span class="tech-tag">TDD</span>
+                            <span class="tech-tag">Scrum</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="secondary">🔒 Projet pro</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="experience">
+        <div class="container">
+            <h2 class="section-title">Parcours Professionnel</h2>
+            <div class="timeline">
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2022</div>
+                        <h3>Diplôme d'Ingénieur Informatique</h3>
+                        <p class="timeline-company">Institut d'Ingénierie Informatique de Limoges</p>
+                        <p>Formation en développement logiciel et data engineering.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2021 - 8 mois</div>
+                        <h3>Apprenti Ingénieur Full Stack</h3>
+                        <p class="timeline-company">CELESTE - FAI</p>
+                        <p>Développement d'une solution FTTO en équipe Scrum. ReactJS, APIs REST, TDD.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2019 - 12 mois</div>
+                        <h3>Apprenti Ingénieur Backend</h3>
+                        <p class="timeline-company">ARIANE.NETWORK - FAI</p>
+                        <p>API Python/Flask pour éligibilité FTTH. MongoDB, optimisation GPS, cartes interactives.</p>
+                    </div>
+                </div>
+
+                <div class="timeline-item">
+                    <div class="timeline-content">
+                        <div class="timeline-date">2018 - 10 mois</div>
+                        <h3>Apprenti Ingénieur Développement</h3>
+                        <p class="timeline-company">ARIANE.NETWORK - FAI</p>
+                        <p>Refonte d'outils internes. CakePHP, MySQL, conception UX/UI.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <p>© 2025 Hamid LEULMI - Ingénieur Développement / Data Engineer</p>
+            <p style="margin-top: 10px; opacity: 0.7;">Disponible pour de nouvelles opportunités</p>
+        </div>
+    </footer>
+</body>
+</html>
