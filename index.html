@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -35,16 +36,12 @@
             padding: 0 20px;
         }
 
-        p {
+        .about p,
+        .project-body p,
+        .timeline-content p {
             text-align: justify;
         }
-        
-        .container p {
-            text-align: inherit;
-        }
 
-
-        /* Header */
         header {
             background: linear-gradient(135deg, var(--primary) 0%, var(--accent) 100%);
             padding: 80px 0;
@@ -92,14 +89,14 @@
             color: white;
             text-decoration: none;
             padding: 10px 25px;
-            background: rgba(255,255,255,0.2);
+            background: rgba(255, 255, 255, 0.2);
             border-radius: 25px;
             transition: all 0.3s;
             backdrop-filter: blur(10px);
         }
 
         .header-links a:hover {
-            background: rgba(255,255,255,0.3);
+            background: rgba(255, 255, 255, 0.3);
             transform: translateY(-2px);
         }
 
@@ -168,6 +165,8 @@
         }
 
         .project-card {
+            display: flex;
+            flex-direction: column;
             background: var(--bg-card);
             border-radius: 12px;
             overflow: hidden;
@@ -195,7 +194,7 @@
             right: -50%;
             width: 200%;
             height: 200%;
-            background: radial-gradient(circle, rgba(255,255,255,0.1) 0%, transparent 70%);
+            background: radial-gradient(circle, rgba(255, 255, 255, 0.1) 0%, transparent 70%);
         }
 
         .project-header h3 {
@@ -212,12 +211,16 @@
 
         .project-body {
             padding: 25px;
+            display: flex;
+            flex-direction: column;
+            flex: 1;
         }
 
         .project-body p {
             color: var(--text-muted);
             margin-bottom: 20px;
             font-size: 0.95em;
+            flex: 1;
         }
 
         .tech-tags {
@@ -238,6 +241,7 @@
         .project-links {
             display: flex;
             gap: 15px;
+            margin-top: auto;
         }
 
         .project-links a {
@@ -382,6 +386,7 @@
         }
     </style>
 </head>
+
 <body>
     <header>
         <div class="container">
@@ -400,8 +405,11 @@
             <div class="about-content">
                 <div>
                     <h2>À propos</h2>
-                    <p>Ingénieur diplômé avec 3+ ans d'expérience en développement web full-stack et data engineering. Passionné par la création de solutions techniques élégantes et performantes.</p>
-                    <p>Spécialisé dans le développement d'applications web modernes, l'architecture cloud et la sécurité applicative. Fort d'une expérience en méthodologie Agile et en gestion de projets techniques de bout en bout.</p>
+                    <p>Ingénieur diplômé avec 3+ ans d'expérience en développement web full-stack et data engineering.
+                        Passionné par la création de solutions techniques élégantes et performantes.</p>
+                    <p>Spécialisé dans le développement d'applications web modernes, l'architecture cloud et la sécurité
+                        applicative. Fort d'une expérience en méthodologie Agile et en gestion de projets techniques de
+                        bout en bout.</p>
                 </div>
                 <div>
                     <h2>Compétences</h2>
@@ -434,7 +442,8 @@
                         <p class="project-type">Application de Réservation</p>
                     </div>
                     <div class="project-body">
-                        <p>Site de réservation VTC complet avec calcul dynamique des prix, cartes interactives (Leaflet, Mapbox), et infrastructure sécurisée (Docker, Nginx, SSL/TLS, RGPD).</p>
+                        <p>Site de réservation VTC complet avec calcul dynamique des prix, cartes interactives (Leaflet,
+                            Mapbox), et infrastructure sécurisée (Docker, Nginx, SSL/TLS, RGPD).</p>
                         <div class="tech-tags">
                             <span class="tech-tag">WordPress</span>
                             <span class="tech-tag">JavaScript</span>
@@ -454,7 +463,8 @@
                         <p class="project-type">Application Full Stack</p>
                     </div>
                     <div class="project-body">
-                        <p>Application web complète avec backend Django REST API et frontend React. Architecture Docker multi-services, déploiement cloud automatisé (Vercel/Render).</p>
+                        <p>Application web complète avec backend Django REST API et frontend React. Architecture Docker
+                            multi-services, déploiement cloud automatisé (Vercel/Render).</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Django</span>
                             <span class="tech-tag">React</span>
@@ -475,7 +485,8 @@
                         <p class="project-type">Site Vitrine & SEO</p>
                     </div>
                     <div class="project-body">
-                        <p>Site vitrine professionnel optimisé SEO avec articles de conseils, fiche Google My Business, et sécurisation complète (firewall, SSL/TLS, RGPD).</p>
+                        <p>Site vitrine professionnel optimisé SEO avec articles de conseils, fiche Google My Business,
+                            et sécurisation complète (firewall, SSL/TLS, RGPD).</p>
                         <div class="tech-tags">
                             <span class="tech-tag">WordPress</span>
                             <span class="tech-tag">SEO</span>
@@ -494,7 +505,8 @@
                         <p class="project-type">Solution B2B</p>
                     </div>
                     <div class="project-body">
-                        <p>API Python/Flask avec carte interactive pour accès instantané à l'éligibilité FTTH. Traitement de fichiers IPE, stockage NoSQL, optimisation GPS.</p>
+                        <p>API Python/Flask avec carte interactive pour accès instantané à l'éligibilité FTTH.
+                            Traitement de fichiers IPE, stockage NoSQL, optimisation GPS.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">Python</span>
                             <span class="tech-tag">Flask</span>
@@ -513,7 +525,8 @@
                         <p class="project-type">ERP Télécom</p>
                     </div>
                     <div class="project-body">
-                        <p>Solution complète d'éligibilité et commandes FTTO intégrée à l'ERP. Développement en méthode Agile/Scrum avec TDD et ReactJS.</p>
+                        <p>Solution complète d'éligibilité et commandes FTTO intégrée à l'ERP. Développement en méthode
+                            Agile/Scrum avec TDD et ReactJS.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">PHP</span>
@@ -546,7 +559,8 @@
                         <div class="timeline-date">Juin 2025 - 2 mois</div>
                         <h3>Développeur Web - Plateforme VTC</h3>
                         <p class="timeline-company">ITIM VTC Lille (Projet bénévole)</p>
-                        <p>Application de réservation complète avec cartes interactives, calcul dynamique des prix, infrastructure Docker sécurisée.</p>
+                        <p>Application de réservation complète avec cartes interactives, calcul dynamique des prix,
+                            infrastructure Docker sécurisée.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -603,4 +617,5 @@
         </div>
     </footer>
 </body>
+
 </html>
