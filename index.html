@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Hamid LEULMI - Ingénieur Développement / Data Engineer</title>
+    <title>Hamid LEULMI - Ingénieur Data Engineering & Intégration de Systèmes</title>
     <style>
         * {
             margin: 0;
@@ -34,12 +34,6 @@
             max-width: 1200px;
             margin: 0 auto;
             padding: 0 20px;
-        }
-
-        .about p,
-        .project-body p,
-        .timeline-content p {
-            text-align: justify;
         }
 
         header {
@@ -178,6 +172,10 @@
             transform: translateY(-8px);
             border-color: var(--accent);
             box-shadow: 0 20px 40px rgba(14, 165, 233, 0.2);
+        }
+
+        .project-card.featured {
+            border-color: var(--accent);
         }
 
         .project-header {
@@ -391,7 +389,7 @@
     <header>
         <div class="container">
             <h1>Hamid LEULMI</h1>
-            <p class="subtitle">Ingénieur Développement / Data Engineer</p>
+            <p class="subtitle">Ingénieur Data Engineering & Intégration de Systèmes</p>
             <div class="header-links">
                 <a href="https://github.com/Hamid-LMI" target="_blank">🔗 GitHub</a>
                 <a href="https://www.linkedin.com/in/hamid-leulmi" target="_blank">💼 LinkedIn</a>
@@ -405,27 +403,32 @@
             <div class="about-content">
                 <div>
                     <h2>À propos</h2>
-                    <p>Ingénieur diplômé avec 3+ ans d'expérience en développement web full-stack et data engineering.
-                        Passionné par la création de solutions techniques élégantes et performantes.</p>
-                    <p>Spécialisé dans le développement d'applications web modernes, l'architecture cloud et la sécurité
-                        applicative. Fort d'une expérience en méthodologie Agile et en gestion de projets techniques de
-                        bout en bout.</p>
+                    <p>Ingénieur diplômé, je pilote des projets de migration et d'intégration de données à fort
+                        enjeu métier (Talend, SQL), de la qualification du référentiel jusqu'au déploiement.
+                        Autonome sur des environnements Linux/Docker, j'aime les contextes où comprendre le métier
+                        fait toute la différence.</p>
+                    <p>Mon parcours, construit depuis 2018 entre développement full-stack et data engineering,
+                        m'a donné une vision transverse : du cadrage fonctionnel avec les équipes métier jusqu'à
+                        l'implémentation technique et le déploiement. Une double compétence utile pour porter un
+                        projet data de bout en bout.</p>
                 </div>
                 <div>
                     <h2>Compétences</h2>
                     <div class="skills-grid">
+                        <div class="skill-badge">Talend / ETL</div>
+                        <div class="skill-badge">SQL</div>
+                        <div class="skill-badge">EtlTool</div>
+                        <div class="skill-badge">Migration de données</div>
+                        <div class="skill-badge">Power BI</div>
+                        <div class="skill-badge">Qlik Sense</div>
+                        <div class="skill-badge">Metabase</div>
+                        <div class="skill-badge">Docker</div>
+                        <div class="skill-badge">Linux</div>
                         <div class="skill-badge">Python</div>
                         <div class="skill-badge">PHP</div>
                         <div class="skill-badge">JavaScript</div>
-                        <div class="skill-badge">React</div>
-                        <div class="skill-badge">Django</div>
-                        <div class="skill-badge">Docker</div>
-                        <div class="skill-badge">PostgreSQL</div>
-                        <div class="skill-badge">MongoDB</div>
-                        <div class="skill-badge">Linux</div>
-                        <div class="skill-badge">Nginx</div>
+                        <div class="skill-badge">MySQL / MongoDB</div>
                         <div class="skill-badge">Git</div>
-                        <div class="skill-badge">Agile/Scrum</div>
                     </div>
                 </div>
             </div>
@@ -436,65 +439,49 @@
         <div class="container">
             <h2 class="section-title">Projets Phares</h2>
             <div class="projects-grid">
-                <div class="project-card">
+                <div class="project-card featured">
                     <div class="project-header">
-                        <h3>Plateforme VTC Lille</h3>
-                        <p class="project-type">Application de Réservation</p>
+                        <h3>Migration Apogée → Pégase</h3>
+                        <p class="project-type">Migration & Intégration de Données</p>
                     </div>
                     <div class="project-body">
-                        <p>Site de réservation VTC complet avec calcul dynamique des prix, cartes interactives (Leaflet,
-                            Mapbox), et infrastructure sécurisée (Docker, Nginx, SSL/TLS, RGPD).</p>
+                        <p>Référent technique sur le déploiement du nouveau SI scolarité de l'Université de Lille,
+                            en remplacement d'Apogée (~30 ans d'historique). Cadrage de la reprise des données
+                            vivantes, qualification et fiabilisation du référentiel avec les équipes métier, gestion
+                            du delta Apogée/Pégase, pilotage de l'intégration via Talend et coexistence temporaire
+                            des deux systèmes.</p>
                         <div class="tech-tags">
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">JavaScript</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Nginx</span>
-                            <span class="tech-tag">MySQL</span>
+                            <span class="tech-tag">Talend</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">EtlTool</span>
+                            <span class="tech-tag">Migration de données</span>
+                            <span class="tech-tag">Gestion de projet</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://itim-vtc-lille.fr/" target="_blank">🌐 Voir le site</a>
+                            <a href="#" class="secondary">🔒 Projet pro</a>
                         </div>
                     </div>
                 </div>
 
-                <div class="project-card">
+                <div class="project-card featured">
                     <div class="project-header">
-                        <h3>Gestion de Bibliothèque</h3>
-                        <p class="project-type">Application Full Stack</p>
+                        <h3>POC & Déploiement Metabase</h3>
+                        <p class="project-type">BI Self-Service</p>
                     </div>
                     <div class="project-body">
-                        <p>Application web complète avec backend Django REST API et frontend React. Architecture Docker
-                            multi-services, déploiement cloud automatisé (Vercel/Render).</p>
+                        <p>Initiative pour remplacer un outil interne de restitution SQL limité (troncature des
+                            requêtes, exports CSV corrompus par les caractères spéciaux). Conception d'un POC validé
+                            par les utilisateurs, puis installation, sécurisation et déploiement de Metabase en
+                            production : administration, création de dashboards et formation des équipes
+                            fonctionnelles à l'autonomie.</p>
                         <div class="tech-tags">
-                            <span class="tech-tag">Django</span>
-                            <span class="tech-tag">React</span>
-                            <span class="tech-tag">PostgreSQL</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Cloud</span>
+                            <span class="tech-tag">Metabase</span>
+                            <span class="tech-tag">SQL</span>
+                            <span class="tech-tag">Administration</span>
+                            <span class="tech-tag">Sécurité</span>
                         </div>
                         <div class="project-links">
-                            <a href="https://github.com/Hamid-LMI/library_project" target="_blank">💻 GitHub</a>
-                            <a href="#" class="secondary">🌐 Demo</a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="project-card">
-                    <div class="project-header">
-                        <h3>Nord Plomberie</h3>
-                        <p class="project-type">Site Vitrine & SEO</p>
-                    </div>
-                    <div class="project-body">
-                        <p>Site vitrine professionnel optimisé SEO avec articles de conseils, fiche Google My Business,
-                            et sécurisation complète (firewall, SSL/TLS, RGPD).</p>
-                        <div class="tech-tags">
-                            <span class="tech-tag">WordPress</span>
-                            <span class="tech-tag">SEO</span>
-                            <span class="tech-tag">Docker</span>
-                            <span class="tech-tag">Nginx</span>
-                        </div>
-                        <div class="project-links">
-                            <a href="https://nord-plomberie.fr/" target="_blank">🌐 Voir le site</a>
+                            <a href="#" class="secondary">🔒 Projet pro</a>
                         </div>
                     </div>
                 </div>
@@ -525,8 +512,8 @@
                         <p class="project-type">ERP Télécom</p>
                     </div>
                     <div class="project-body">
-                        <p>Solution complète d'éligibilité et commandes FTTO intégrée à l'ERP. Développement en méthode
-                            Agile/Scrum avec TDD et ReactJS.</p>
+                        <p>Solution complète d'éligibilité et commandes FTTO intégrée à l'ERP. Développement en
+                            méthode Agile/Scrum avec TDD et ReactJS.</p>
                         <div class="tech-tags">
                             <span class="tech-tag">React</span>
                             <span class="tech-tag">PHP</span>
@@ -535,6 +522,68 @@
                         </div>
                         <div class="project-links">
                             <a href="#" class="secondary">🔒 Projet pro</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Plateforme VTC Lille</h3>
+                        <p class="project-type">Application de Réservation</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Site de réservation VTC complet avec calcul dynamique des prix, cartes interactives
+                            (Leaflet, Mapbox), et infrastructure sécurisée (Docker, Nginx, SSL/TLS, RGPD).</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">JavaScript</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Nginx</span>
+                            <span class="tech-tag">MySQL</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://itim-vtc-lille.fr/" target="_blank">🌐 Voir le site</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Gestion de Bibliothèque</h3>
+                        <p class="project-type">Application Full Stack</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Application web complète avec backend Django REST API et frontend React. Architecture
+                            Docker multi-services, déploiement cloud automatisé (Vercel/Render).</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">Django</span>
+                            <span class="tech-tag">React</span>
+                            <span class="tech-tag">PostgreSQL</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Cloud</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://github.com/Hamid-LMI/library_project" target="_blank">💻 GitHub</a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card">
+                    <div class="project-header">
+                        <h3>Nord Plomberie</h3>
+                        <p class="project-type">Site Vitrine & SEO</p>
+                    </div>
+                    <div class="project-body">
+                        <p>Site vitrine professionnel optimisé SEO avec articles de conseils, fiche Google My
+                            Business, et sécurisation complète (firewall, SSL/TLS, RGPD).</p>
+                        <div class="tech-tags">
+                            <span class="tech-tag">WordPress</span>
+                            <span class="tech-tag">SEO</span>
+                            <span class="tech-tag">Docker</span>
+                            <span class="tech-tag">Nginx</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="https://nord-plomberie.fr/" target="_blank">🌐 Voir le site</a>
                         </div>
                     </div>
                 </div>
@@ -548,19 +597,23 @@
             <div class="timeline">
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">Octobre 2025 - 1 mois</div>
-                        <h3>Développeur Web - Site Vitrine</h3>
-                        <p class="timeline-company">Nord Plomberie (Projet bénévole)</p>
-                        <p>Site vitrine WordPress avec optimisation SEO, Google My Business, sécurisation complète.</p>
+                        <div class="timeline-date">Juin 2026 - Aujourd'hui</div>
+                        <h3>Ingénieur d'Études - Référent Technique</h3>
+                        <p class="timeline-company">Université de Lille - Projet Pégase</p>
+                        <p>Référent technique du déploiement du SI scolarité Pégase en remplacement d'Apogée :
+                            cadrage de la reprise de données, qualification du référentiel, intégration via Talend.
+                            Initiative complémentaire : POC et déploiement de Metabase pour la BI self-service.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">Juin 2025 - 2 mois</div>
-                        <h3>Développeur Web - Plateforme VTC</h3>
-                        <p class="timeline-company">ITIM VTC Lille (Projet bénévole)</p>
-                        <p>Application de réservation complète avec cartes interactives, calcul dynamique des prix,
-                            infrastructure Docker sécurisée.</p>
+                        <div class="timeline-date">Juin 2025 - Mai 2026</div>
+                        <h3>Développeur Full Stack / Gestion de projets web</h3>
+                        <p class="timeline-company">Missions TPE - Lille</p>
+                        <p>Accompagnement de TPE dans la structuration de leurs outils numériques : conception et
+                            pilotage de solutions web en autonomie (réservation, automatisation, géolocalisation),
+                            suivi des performances et amélioration continue. Livrables notables : plateforme de
+                            réservation VTC et site vitrine Nord Plomberie.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
@@ -568,42 +621,28 @@
                         <div class="timeline-date">Septembre 2024</div>
                         <h3>POEC Data Engineer</h3>
                         <p class="timeline-company">M2i Formation - Villeneuve d'Ascq</p>
-                        <p>Formation de 6 mois en Data Engineering : ETL, Big Data, Cloud.</p>
+                        <p>Formation de spécialisation en ingénierie des données, traitement de big data et
+                            machine learning.</p>
                     </div>
                 </div>
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2022</div>
+                        <div class="timeline-date">Février 2022</div>
                         <h3>Diplôme d'Ingénieur Informatique</h3>
-                        <p class="timeline-company">Institut d'Ingénierie Informatique de Limoges</p>
-                        <p>Formation en développement logiciel et data engineering.</p>
+                        <p class="timeline-company">Institut d'Ingénierie Informatique de Limoges - Rodez</p>
+                        <p>Formation en génie logiciel, architecture système et technologies web modernes.</p>
                     </div>
                 </div>
 
                 <div class="timeline-item">
                     <div class="timeline-content">
-                        <div class="timeline-date">2021 - 8 mois</div>
-                        <h3>Apprenti Ingénieur Full Stack</h3>
-                        <p class="timeline-company">CELESTE - FAI</p>
-                        <p>Développement d'une solution FTTO en équipe Scrum. ReactJS, APIs REST, TDD.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2019 - 12 mois</div>
-                        <h3>Apprenti Ingénieur Backend</h3>
-                        <p class="timeline-company">ARIANE.NETWORK - FAI</p>
-                        <p>API Python/Flask pour éligibilité FTTH. MongoDB, optimisation GPS, cartes interactives.</p>
-                    </div>
-                </div>
-
-                <div class="timeline-item">
-                    <div class="timeline-content">
-                        <div class="timeline-date">2018 - 10 mois</div>
-                        <h3>Apprenti Ingénieur Développement WEB</h3>
-                        <p class="timeline-company">ARIANE.NETWORK - FAI</p>
-                        <p>Refonte d'outils internes. CakePHP, MySQL, conception UX/UI.</p>
+                        <div class="timeline-date">2018 - 2022</div>
+                        <h3>Alternant Ingénieur R&D - Développement & Systèmes</h3>
+                        <p class="timeline-company">ARIANE.NETWORK & CELESTE - Albi</p>
+                        <p>Maintenance et évolution d'applications métiers en environnement Linux conteneurisé,
+                            développement d'API pour l'automatisation de traitements liés aux réseaux télécoms,
+                            gestion et manipulation de données (SQL, MongoDB). Stack : Docker, CakePHP, Slim PHP,
+                            ReactJS, Flask, MySQL, MongoDB.</p>
                     </div>
                 </div>
             </div>
@@ -612,7 +651,7 @@
 
     <footer>
         <div class="container">
-            <p>© 2025 Hamid LEULMI - Ingénieur Développement / Data Engineer</p>
+            <p>© 2026 Hamid LEULMI - Ingénieur Data Engineering & Intégration de Systèmes</p>
             <p style="margin-top: 10px; opacity: 0.7;">Disponible pour de nouvelles opportunités</p>
         </div>
     </footer>
